@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* barlow-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Barlow';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/assets/fonts/barlow-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-condensed-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Barlow-Condensed';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/assets/fonts/barlow-condensed-v12-latin-regular.woff2')
+		format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* bellefair-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Bellefair';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/assets/fonts/bellefair-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+	/* Colors */
+	--blue-900: hsl(230, 35, 7%);
+	--blue-300: hsl(231, 77, 90%);
+	--white: hsl(0, 0%, 100%);
+	/* Font Size */
+	--fs-1: clamp(5rem, 3.5915rem + 6.0094vw, 9rem);
+	--fs-2: clamp(3.5rem, 2.6197rem + 3.7559vw, 6rem);
+	--fs-3: clamp(1.5rem, 0.7958rem + 3.0047vw, 3.5rem);
+	--fs-4: clamp(1.125rem, 0.8169rem + 1.3146vw, 2rem);
+	--fs-5: clamp(1.25rem, 1.0739rem + 0.7512vw, 1.75rem); /* change font*/
+	--fs-6: clamp(1rem, 0.7359rem + 1.1268vw, 1.75rem);
+	--fs-7: 0.875rem; /* 14px - change font */
+	--fs-8: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem); /* can be bold */
+	--fs-9: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
+}
+
+/* Mobile first styling */
+/* Font presets - 1, 2, 3, 4, 6, 8, 9 */
+
+@media (width >= 50.625em) {
+	/* Tablet font presets - 2,3, 4, 5, 9 */
+}
+
+/* Desktop */
+@media (width >= 75em) {
+	/* Desktop font presets - 1, 2, 3, 4, 5, 6, 7, 8, 9 */
+}
