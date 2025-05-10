@@ -1,3 +1,5 @@
+/* Global Styles */
+
 *,
 *::before,
 *::after {
@@ -32,9 +34,10 @@
 
 :root {
 	/* Colors */
-	--blue-900: hsl(230, 35, 7%);
-	--blue-300: hsl(231, 77, 90%);
+	--blue-900: hsl(230, 35%, 7%);
+	--blue-300: hsl(231, 77%, 90%);
 	--white: hsl(0, 0%, 100%);
+	--pencil: 1px solid hsl(276, 77%, 58%);
 	/* Font Size */
 	--fs-1: clamp(5rem, 3.5915rem + 6.0094vw, 9rem);
 	--fs-2: clamp(3.5rem, 2.6197rem + 3.7559vw, 6rem);
@@ -47,8 +50,64 @@
 	--fs-9: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
 }
 
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Barlow', sans-serif;
+	background-color: var(--blue-900);
+	background-image: url(./assets/home/background-home-mobile.jpg);
+	background-repeat: no-repeat;
+	background-size: 375px 724px;
+	color: var(--white);
+}
+
+/* Layout guide */
+main,
+div,
+nav,
+footer,
+header,
+section,
+article,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+img {
+	border: var(--pencil);
+}
+
 /* Mobile first styling */
 /* Font presets - 1, 2, 3, 4, 6, 8, 9 */
+
+/* Navigation - mobile */
+.nav-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 2rem;
+}
+
+.menu-button {
+	height: 30px;
+	width: 36px;
+}
+
+.nav-links {
+	display: none;
+}
+
+/* Main Content */
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
 
 @media (width >= 50.625em) {
 	/* Tablet font presets - 2,3, 4, 5, 9 */
