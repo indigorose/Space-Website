@@ -36,6 +36,7 @@
 	/* Colors */
 	--blue-900: hsl(230, 35%, 7%);
 	--blue-300: hsl(231, 77%, 90%);
+	--shadow: rgba(239, 239, 240, 0.2);
 	--white: hsl(0, 0%, 100%);
 	--pencil: 1px solid hsl(276, 77%, 58%);
 	/* Font Size */
@@ -74,12 +75,12 @@ body {
 	background-color: var(--blue-900);
 	background-image: url(./assets/home/background-home-mobile.jpg);
 	background-repeat: no-repeat;
-	background-size: 375px 724px;
+	background-size: 375px 812px;
 	color: var(--white);
 }
 
 /* Layout guide */
-main,
+/* main,
 div,
 nav,
 footer,
@@ -94,7 +95,7 @@ ul,
 li,
 img {
 	border: var(--pencil);
-}
+} */
 
 /* Mobile first styling */
 /* Font presets - 1, 2, 3, 4, 6, 8, 9 */
@@ -118,12 +119,14 @@ img {
 
 /* Main Content */
 
-.hero {
+.hero-container {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+}
+
+.hero {
+	padding: var(--spacing-300);
+	margin: 0;
 }
 
 .hero-text-container {
@@ -132,7 +135,7 @@ img {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	margin: var(--spacing-300);
+	margin: 0;
 }
 
 .hero-subheading {
@@ -142,6 +145,7 @@ img {
 	text-transform: uppercase;
 	color: var(--blue-300);
 	font-size: var(--fs-8);
+	margin: 0;
 }
 
 .hero-heading {
@@ -161,8 +165,38 @@ img {
 	color: var(--blue-300);
 	font-size: var(--fs-9);
 	line-height: 1.5;
-	max-width: 540px;
-	margin-bottom: var(--spacing-300);
+	margin: 0;
+}
+
+.hero-button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 382px;
+}
+.hero-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 144px;
+	height: 144px;
+	background-color: var(--white);
+	border-radius: 50%;
+}
+.hero-button:hover {
+	box-shadow: 0 0 0 70px var(--shadow);
+	transition: box-shadow 0.7s ease;
+}
+
+.hero-button-text {
+	color: var(--blue-900);
+	font-family: 'Bellefair', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: var(--fs-4);
+	border: none;
+	cursor: pointer;
 }
 
 @media (width >= 50.625em) {
