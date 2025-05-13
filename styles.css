@@ -199,8 +199,21 @@ img {
 	cursor: pointer;
 }
 
-@media (width >= 50.625em) {
+@media (width >= 48em) {
 	/* Tablet font presets - 2,3, 4, 5, 9 */
+	body {
+		background-image: url(./assets/home/background-home-tablet.jpg);
+		background-repeat: no-repeat;
+		background-size: 768px 1024px;
+	}
+	/* Tablet - Header */
+	.nav-toggle {
+		display: none;
+	}
+	.nav-links {
+		display: flex;
+		flex-direction: row;
+	}
 }
 
 /* Desktop */
