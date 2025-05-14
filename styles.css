@@ -80,7 +80,7 @@ body {
 }
 
 /* Layout guide */
-/* main,
+main,
 div,
 nav,
 footer,
@@ -95,7 +95,7 @@ ul,
 li,
 img {
 	border: var(--pencil);
-} */
+}
 
 /* Mobile first styling */
 /* Font presets - 1, 2, 3, 4, 6, 8, 9 */
@@ -213,6 +213,30 @@ img {
 	.nav-links {
 		display: flex;
 		flex-direction: row;
+	}
+
+	.hero-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 128px 24px;
+	}
+
+	.hero {
+		padding: 0;
+	}
+
+	.hero-text-container {
+		padding-bottom: 24px;
+	}
+	.hero-description {
+		font-size: var(--fs-9);
+	}
+
+	.hero-button {
+		width: 272px;
+		height: 272px;
 	}
 }
 
