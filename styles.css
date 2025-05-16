@@ -113,6 +113,9 @@ img {
 	width: 36px;
 }
 
+.cross {
+	display: none;
+}
 .nav-links {
 	display: none;
 }
