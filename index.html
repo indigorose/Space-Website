@@ -17,23 +17,31 @@
 		<!-- Mobile first navigation - Logo and hamburger -->
 		<main class="mobile tablet desktop home">
 			<header>
-				<nav class="navigation">
-					<img
-						src="./assets/shared/logo.svg"
-						alt="logo"
-						class="logo"
-					/>
-					<button class="nav-toggle menu-button">
+				<div class="nav-header">
+					<a href="£" class="logo">
+						<img
+							src="./assets/shared/logo.svg"
+							alt="logo"
+							class="logo"
+						/>
+					</a>
+					<button class="nav-toggle" id="open-nav">
 						<img
 							src="./assets/shared/icon-hamburger.svg"
 							alt="hamburger"
-							class="hamburger"
+							class="menu-button"
 						/>
 					</button>
-					<button class="cross">
-						<img src="./assets/shared/icon-close.svg" alt="" />
-					</button>
-					<ul class="nav-links">
+				</div>
+				<nav class="nav-menu">
+					<ul class="nav-links" id="nav-links">
+						<button class="cross" id="close-nav">
+							<img
+								src="./assets/shared/icon-close.svg"
+								alt="logo"
+								class="logo"
+							/>
+						</button>
 						<li class="nav-link">
 							<a href="#home"
 								><span class="number">00 </span> Home</a
