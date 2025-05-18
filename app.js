@@ -5,8 +5,10 @@ const navLinks = document.getElementById('nav-links');
 
 openNav.addEventListener('click', () => {
 	navLinks.classList.add('open');
+	openNav.classList.add('hide');
 });
 
 closeNav.addEventListener('click', () => {
 	navLinks.classList.remove('open');
+	openNav.classList.remove('hide');
 });
