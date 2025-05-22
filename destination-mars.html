@@ -1,37 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon-spacecraft-thumbnail.png"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="./destination-styles.css" />
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  01 Pick your destination
-
-  Moon
-  Mars
-  Europa
-  Titan
-
-  Mars
-
-  Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
-  the tallest planetary mountain in our solar system. It’s two and a half times 
-  the size of Everest!
-
-  Avg. distance
-  225 mil. km
-
-  Est. travel time
-  9 months
-</body>
+		<title>Space tourism website</title>
+	</head>
+	<body>
+		<main
+			class="destination-container destination-mobile destination-tablet destination-desktop"
+		>
+			<header>
+				<div class="nav-header">
+					<a href="#" class="logo">
+						<img
+							src="./assets/shared/logo.svg"
+							alt="logo"
+							class="logo"
+						/>
+					</a>
+					<button class="nav-toggle" id="open-nav">
+						<img
+							src="./assets/shared/icon-hamburger.svg"
+							alt="hamburger"
+							class="menu-button"
+						/>
+					</button>
+				</div>
+				<nav class="nav-menu">
+					<ul class="nav-links" id="nav-links">
+						<button class="cross" id="close-nav">
+							<img
+								src="./assets/shared/icon-close.svg"
+								alt="logo"
+								class="logo"
+							/>
+						</button>
+						<li class="nav-link">
+							<a href="./index.html"
+								><span class="number">00 </span> Home</a
+							>
+						</li>
+						<li class="nav-link">
+							<a href="./destination-moon.html"
+								><span class="number">01 </span> Destination</a
+							>
+						</li>
+						<li class="nav-link">
+							<a href="#crew"
+								><span class="number">02 </span> Crew</a
+							>
+						</li>
+						<li class="nav-link">
+							<a href="#technology"
+								><span class="number">03 </span> Technology</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<section class="main-content">
+				<div class="destination-hero-container">
+					<div class="destination-hero">
+						<h1>
+							<span class="destination-number">01</span> Pick your
+							destination
+						</h1>
+					</div>
+					<div class="planet-container">
+						<div class="planet-image-container">
+							<img
+								src="./assets/destination/image-mars.webp"
+								alt="mars"
+								class="planet-image"
+								id="planet-image"
+							/>
+						</div>
+						<ul class="planet-links">
+							<li class="planet-link">
+								<a href="./destination-moon.html" class="active"
+									>Moon</a
+								>
+							</li>
+							<li class="planet-link">
+								<a href="./destination-mars.html">Mars</a>
+							</li>
+							<li class="planet-link">
+								<a href="./destination-europa.html">Europa</a>
+							</li>
+							<li class="planet-link">
+								<a href="./destination-titan.html">Titan</a>
+							</li>
+						</ul>
+						<div class="planet-info">
+							<h2 class="planet-name" id="planet-name">Mars</h2>
+							<p class="planet-description">
+								Don’t forget to pack your hiking boots. You’ll
+								need them to tackle Olympus Mons, the tallest
+								planetary mountain in our solar system. It’s two
+								and a half times the size of Everest!
+							</p>
+							<!-- line -->
+							<hr class="line" />
+							<div class="planet-distance-time">
+								<div class="planet-distance">
+									<p class="distance">Avg. distance</p>
+									<p class="distance-number" id="distance">
+										225 mil. km
+									</p>
+									<p class="time">est. Travel Time</p>
+									<p class="time-number" id="time">
+										9 Months
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script src="app.js"></script>
+	</body>
 </html>
