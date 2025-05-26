@@ -78,7 +78,7 @@ body {
 }
 
 /* Layout guide */
-/* main,
+main,
 div,
 nav,
 footer,
@@ -93,7 +93,7 @@ ul,
 li,
 img {
 	border: var(--pencil);
-} */
+}
 
 /* Mobile first styling */
 /* Font presets - 1, 2, 3, 4, 6, 8, 9 */
@@ -562,4 +562,24 @@ img {
 	font-size: var(--fs-d-6);
 	margin: 0;
 	padding-bottom: var(--spacing-150);
+}
+
+.rank-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: var(--spacing-300) 0;
+	margin: 0 auto;
+}
+
+.rank {
+	font-family: 'Bellefair', sans-serif;
+	font-size: var(--fs-6);
+	font-weight: 400;
+	letter-spacing: var(--letter-spacing-2);
+	text-transform: uppercase;
+	color: var(--blue-300);
+	margin: 0 auto;
 }
