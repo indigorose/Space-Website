@@ -624,7 +624,7 @@ img {
 	align-items: center;
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 var(--spacing-300) 0;
 	gap: var(--spacing-200);
 }
 .pagination-item {
@@ -635,16 +635,13 @@ img {
 	border-radius: 50%;
 	height: 12px;
 	width: 12px;
+	cursor: pointer;
 }
 
-.pagination-item a {
-	display: inline-block;
-	padding: 0;
-	margin: 0;
-	color: var(--grey);
-	font-size: 2px;
-	width: 100%;
+.pagination-item:hover {
+	background-color: var(--white);
 }
+
 .active {
 	background-color: var(--white);
 }
@@ -655,6 +652,35 @@ img {
 	align-items: center;
 }
 .crew-image {
-	width: 81%;
-	height: 340px;
+	height: 300px;
+}
+
+/* Technology Pages */
+.technology-hero {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: var(--spacing-300) 0;
+	gap: var(--spacing-150);
+}
+
+.technology-hero {
+	font-size: var(--fs-6);
+	font-family: 'Barlow-Condensed', sans-serif;
+	letter-spacing: 15%;
+	text-transform: uppercase;
+	margin: 0 auto;
+	font-weight: 400;
+	padding-bottom: var(--spacing-300);
+}
+.technology-number {
+	color: var(--grey);
+	font-weight: 600;
+}
+
+.tech-image img {
+	width: 100%;
+
+	margin: 0;
 }

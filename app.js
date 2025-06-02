@@ -12,3 +12,5 @@ closeNav.addEventListener('click', () => {
 	navLinks.classList.remove('open');
 	openNav.classList.remove('hide');
 });
+
+// Page Navigation
