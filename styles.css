@@ -78,7 +78,7 @@ body {
 }
 
 /* Layout guide */
-main,
+/* main,
 div,
 nav,
 footer,
@@ -93,7 +93,7 @@ ul,
 li,
 img {
 	border: var(--pencil);
-}
+} */
 
 /* Mobile first styling */
 /* Font presets - 1, 2, 3, 4, 6, 8, 9 */
@@ -114,6 +114,13 @@ img {
 	background-image: url('./assets/home/background-home-mobile.jpg');
 	background-repeat: no-repeat;
 	background-size: 375px 812px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	width: 40px;
 }
 /* Mobile nav sliding panel */
 
@@ -661,11 +668,7 @@ img {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding: var(--spacing-300) 0;
 	gap: var(--spacing-150);
-}
-
-.technology-hero {
 	font-size: var(--fs-6);
 	font-family: 'Barlow-Condensed', sans-serif;
 	letter-spacing: 15%;
@@ -679,8 +682,16 @@ img {
 	font-weight: 600;
 }
 
-.tech-image img {
-	width: 100%;
+.tech-image {
+	display: inline-block;
+	position: relative;
+	height: 322px;
+}
 
-	margin: 0;
+.tech-image-landscape {
+	position: absolute;
+	bottom: 0;
+	width: 378px;
+	height: 258px;
+	object-fit: cover;
 }
