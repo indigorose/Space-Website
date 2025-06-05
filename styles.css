@@ -598,7 +598,7 @@ img {
 }
 .pagination-tech-item {
 	display: inline-block;
-	padding: 0;
+	padding: 10px 0;
 	margin: 0;
 	border: 1px solid var(--grey);
 	border-radius: 50%;
@@ -608,6 +608,55 @@ img {
 	text-align: center;
 	vertical-align: middle;
 	line-height: 20px;
+	text-decoration: none;
+	color: var(--white);
+	font-family: 'Bellefair', sans-serif;
+	font-weight: 400;
+	font-size: var(--fs-4);
+}
+
+.tech-active {
+	background-color: var(--white);
+	color: var(--blue-900);
+}
+
+.technology-description {
+	font-family: 'Barlow', sans-serif;
+	padding: 0 var(--spacing-300) var(--spacing-500);
+}
+
+.technology-subtitle {
+	font-family: 'Bellefair', sans-serif;
+	font-size: var(--fs-4);
+	font-weight: 300;
+	text-transform: uppercase;
+	color: var(--grey);
+	margin: 0;
+	text-align: center;
+	padding-bottom: var(--spacing-150);
+}
+
+.technology-name {
+	font-family: 'Bellefair', sans-serif;
+	font-weight: 400;
+	letter-spacing: var(--letter-spacing-2);
+	text-transform: uppercase;
+	color: var(--white);
+	font-size: var(--fs-3);
+	margin: 0;
+	padding-bottom: var(--spacing-150);
+	text-align: center;
+}
+
+.technology-text {
+	font-family: 'Barlow', sans-serif;
+	font-weight: 200;
+	color: var(--blue-300);
+	font-size: var(--fs-9);
+	line-height: 1.5;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: var(--spacing-300);
 }
 
 @media (width >= 48em) {
