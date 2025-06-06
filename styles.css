@@ -116,11 +116,10 @@ img {
 	background-size: 375px 812px;
 }
 
-.logo {
-	display: flex;
-	align-items: center;
-	height: 40px;
-	width: 40px;
+.logo img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
 }
 /* Mobile nav sliding panel */
 
@@ -674,25 +673,44 @@ img {
 		padding: 0 24px;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: flex-end; /* Aligns all header content to the right */
+		align-items: center;
 	}
 
 	.nav-toggle {
 		display: none;
 	}
-	.nav-links {
+
+	.logo {
+		margin-right: auto; /* Pushes nav-links to the right, logo stays left */
+		padding: 24px 0;
 		display: flex;
-		flex-direction: row;
-		margin: 0;
-		list-style-type: none;
-		gap: var(--spacing-300);
-		background-color: rgba(246, 246, 246, 0.1);
 		align-items: center;
 	}
-	.nav-link,
-	.logo {
-		padding: 24px 0;
-		color: var(--white);
+
+	.nav-links {
+		position: static;
+		top: auto;
+		right: auto;
+		height: auto;
+		width: auto;
+		max-width: none;
+		background: none;
+		box-shadow: none;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 0;
+		margin: 0;
+		transform: none;
+		transition: none;
+		display: flex;
+		gap: var(--spacing-300);
+	}
+	.close-logo {
+		display: none;
 	}
 
 	.nav-link {
