@@ -670,7 +670,7 @@ img {
 	}
 	/* Tablet - Header */
 	.nav-toggle,
-	.close-logo {
+	.cross {
 		display: none;
 	}
 	.nav-link:first-of-type {
@@ -682,10 +682,13 @@ img {
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		padding: 0 24px;
+		padding: 0 var(--spacing-500);
 		height: 96px;
 	}
 
+	.nav-header {
+		padding-left: 0;
+	}
 	.logo {
 		display: flex;
 		align-items: center;
@@ -693,6 +696,16 @@ img {
 		margin: 0;
 	}
 
+	.nav-menu {
+		display: flex;
+		align-items: center;
+		height: 96px;
+		margin: 0;
+		background: rgba(255, 255, 255, 0.05);
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(4px);
+	}
 	.nav-links {
 		display: flex;
 		flex-direction: row;
@@ -701,21 +714,10 @@ img {
 		gap: var(--spacing-300);
 		position: static;
 		height: 100%;
-		background: rgba(255, 255, 255, 0.05);
-		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-		backdrop-filter: blur(8px);
-		-webkit-backdrop-filter: blur(4px);
 		padding: 0;
 		margin: 0;
 		transform: none;
 		transition: none;
-	}
-
-	.nav-link {
-		display: flex;
-		align-items: center;
-		height: 96px;
-		margin: 0;
 	}
 
 	.nav-link a {
