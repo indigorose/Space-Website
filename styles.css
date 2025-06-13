@@ -814,9 +814,46 @@ img {
 	}
 
 	/* Technology tablet */
+
+	.tech-tablet {
+		margin: 0;
+		padding: 0;
+		background-image: url(./assets/technology/background-technology-tablet.jpg);
+		background-repeat: no-repeat;
+		background-size: 768px 1024px;
+	}
 }
 
 /* Desktop */
 @media (width >= 75em) {
 	/* Desktop font presets - 1, 2, 3, 4, 5, 6, 7, 8, 9 */
+
+	/* Destination desktop */
+	.destination-desktop {
+		margin: 0;
+		padding: 0;
+		background-image: url(./assets/destination/background-destination-desktop.jpg);
+		background-repeat: no-repeat;
+		background-size: 768px 1024px;
+	}
+
+	/* Crew desktop */
+
+	.crew-desktop {
+		margin: 0;
+		padding: 0;
+		background-image: url(./assets/crew/background-crew-tablet.jpg);
+		background-repeat: no-repeat;
+		background-size: 768px 1024px;
+	}
+
+	/* Technology desktop */
+
+	.tech-desktop {
+		margin: 0;
+		padding: 0;
+		background-image: url(./assets/technology/background-technology-tablet.jpg);
+		background-repeat: no-repeat;
+		background-size: 768px 1024px;
+	}
 }
