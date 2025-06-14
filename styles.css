@@ -834,7 +834,7 @@ img {
 		padding: 0;
 		background-image: url(./assets/destination/background-destination-desktop.jpg);
 		background-repeat: no-repeat;
-		background-size: 768px 1024px;
+		background-size: 1440px 888px;
 	}
 
 	/* Crew desktop */
@@ -844,7 +844,7 @@ img {
 		padding: 0;
 		background-image: url(./assets/crew/background-crew-tablet.jpg);
 		background-repeat: no-repeat;
-		background-size: 768px 1024px;
+		background-size: 1440px 888px;
 	}
 
 	/* Technology desktop */
@@ -854,6 +854,6 @@ img {
 		padding: 0;
 		background-image: url(./assets/technology/background-technology-tablet.jpg);
 		background-repeat: no-repeat;
-		background-size: 768px 1024px;
+		background-size: 1440px 888px;
 	}
 }
