@@ -828,6 +828,8 @@ img {
 @media (width >= 75em) {
 	/* Desktop font presets - 1, 2, 3, 4, 5, 6, 7, 8, 9 */
 
+	/* TODO - fix home page on desktop first and then the remaining pages */
+
 	/* Destination desktop */
 	.destination-desktop {
 		margin: 0;
