@@ -161,6 +161,7 @@ img {
 	font-size: var(--fs-8);
 	letter-spacing: 2.7px;
 	width: 100%;
+	word-spacing: var(--spacing-200);
 }
 
 .nav-link:hover {
@@ -682,6 +683,7 @@ img {
 		justify-content: space-between;
 		padding-left: var(--spacing-500);
 		height: 96px;
+		position: relative;
 	}
 
 	.nav-header {
@@ -716,7 +718,7 @@ img {
 		align-items: center;
 		justify-content: flex-end; /* float right */
 		gap: var(--spacing-300);
-		position: static;
+		position: absolute;
 		height: 100%;
 		padding: 0 40px;
 		margin: 0;
@@ -740,7 +742,7 @@ img {
 		text-transform: uppercase;
 		font-size: var(--fs-8);
 		height: 96px;
-		width: 100%;
+		width: fit-content;
 		margin-bottom: 0 !important;
 		text-align: center;
 		padding: 0; /* Optional: add horizontal space between links */
@@ -761,7 +763,7 @@ img {
 
 	.hero-container {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
 		padding: 128px 24px;
@@ -830,6 +832,29 @@ img {
 
 	/* TODO - fix home page on desktop first and then the remaining pages */
 
+	/* Home Page desktop */
+
+	.home-desktop {
+		margin: 0;
+		padding: 0;
+		background-image: url(./assets/home/background-home-desktop.jpg);
+		background-repeat: no-repeat;
+		background-size: 1440px 888px;
+	}
+	/* .main-content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	} */
+	.hero-container {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding: 251px 165px;
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
 	/* Destination desktop */
 	.destination-desktop {
 		margin: 0;
@@ -857,5 +882,29 @@ img {
 		background-image: url(./assets/technology/background-technology-tablet.jpg);
 		background-repeat: no-repeat;
 		background-size: 1440px 888px;
+	}
+
+	/* Navigation */
+	header {
+		height: 136px;
+		position: relative;
+	}
+	.nav-header {
+		position: absolute;
+		bottom: 0;
+	}
+	.nav-links {
+		width: 768px;
+		height: 96px;
+		gap: var(--spacing-500);
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+	}
+
+	.nav-link a {
+		word-spacing: var(--spacing-150);
 	}
 }
