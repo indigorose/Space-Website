@@ -667,14 +667,12 @@ img {
 		background-repeat: no-repeat;
 		background-size: 768px 1024px;
 	}
-	/* Tablet - Header */
+
 	.nav-toggle,
 	.cross {
 		display: none;
 	}
-	.nav-link:first-of-type {
-		margin-top: 0;
-	}
+	/* Tablet - Header */
 
 	header {
 		display: flex;
@@ -696,41 +694,23 @@ img {
 		margin: 0;
 	}
 
-	/* .nav-menu {
-		display: none;
-		float: right;
-		width: 100%;
-		display: flex;
-		align-items: center;
-		height: 96px;
-		margin: 0;
-		background: rgba(255, 255, 255, 0.05);
-		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-		backdrop-filter: blur(8px);
-		-webkit-backdrop-filter: blur(4px);
-	} */
-
 	.nav-links {
-		max-width: 100%;
-		float: right;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: flex-end; /* float right */
-		gap: var(--spacing-300);
+		display: none;
+	}
+	.navigation-links {
 		position: absolute;
-		height: 100%;
-		padding: 0 40px;
+		right: 0;
+		bottom: 0;
+		height: 96px;
+		display: flex;
+		align-items: flex-end;
+		background: rgba(255, 255, 255, 0.04); /* Grey blur effect */
+		backdrop-filter: blur(10px); /* Creates the blur effect */
+		-webkit-backdrop-filter: blur(10px); /* For Safari support */
 		margin: 0;
-		transform: none;
-		transition: none;
-		background: rgba(255, 255, 255, 0.05);
-		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-		backdrop-filter: blur(8px);
-		-webkit-backdrop-filter: blur(4px);
 	}
 
-	.nav-link a {
+	.navigation-links a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -747,16 +727,15 @@ img {
 		text-align: center;
 		padding: 0; /* Optional: add horizontal space between links */
 	}
-	.nav-link:hover {
+	.navigation-link:hover {
 		color: var(--blue-300);
 		border-bottom: var(--spacing-25) solid var(--white);
 	}
 
-	.nav-link:active {
+	.navigation-link:active {
 		color: var(--white);
 		border-bottom: var(--spacing-50) solid var(--white);
 	}
-
 	.number {
 		font-weight: 600;
 	}
@@ -827,10 +806,8 @@ img {
 }
 
 /* Desktop */
-@media (width >= 75em) {
+@media (width >= 70em) {
 	/* Desktop font presets - 1, 2, 3, 4, 5, 6, 7, 8, 9 */
-
-	/* TODO - fix home page on desktop first and then the remaining pages */
 
 	/* Home Page desktop */
 
@@ -840,19 +817,6 @@ img {
 		background-image: url(./assets/home/background-home-desktop.jpg);
 		background-repeat: no-repeat;
 		background-size: 1440px 888px;
-	}
-	/* .main-content {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-	} */
-	.hero-container {
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: flex-end;
-		padding: 251px 165px;
-		max-width: 1440px;
-		margin: 0 auto;
 	}
 
 	/* Destination desktop */
@@ -886,25 +850,80 @@ img {
 
 	/* Navigation */
 	header {
+		position: relative; /* Needed for absolute positioning of children */
 		height: 136px;
-		position: relative;
-	}
-	.nav-header {
-		position: absolute;
-		bottom: 0;
-	}
-	.nav-links {
-		width: 768px;
-		height: 96px;
-		gap: var(--spacing-500);
-		position: absolute;
-		bottom: 0;
-		right: 0;
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
+		padding: 0 24px; /* Adjust as needed */
+	}
+
+	.nav-header {
+		display: flex;
+		align-items: center;
+		width: 736px;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 48px;
+		margin: 0; /* Horizontally centers the logo */
+	}
+
+	.logo img {
+		width: 100%;
+		height: auto;
+	}
+
+	.nav-links {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 96px;
+		display: flex;
+		align-items: flex-end;
+		padding: 20px; /* Adjust as needed */
+		background: rgba(255, 255, 255, 0.04); /* Grey blur effect */
+		backdrop-filter: blur(10px); /* Creates the blur effect */
+		-webkit-backdrop-filter: blur(10px); /* For Safari support */
+	}
+
+	.nav-links::before {
+		content: '';
+		position: absolute;
+		left: -50%; /* Adjust to position the line correctly */
+		top: 50%;
+		width: 100vw; /* Makes the line span the viewport width */
+		height: 1px;
+		background: rgba(255, 255, 255, 0.2); /* Desktop line color */
+		z-index: -1;
+	}
+
+	.nav-link {
+		margin-left: 24px; /* Space between nav items */
 	}
 
 	.nav-link a {
-		word-spacing: var(--spacing-150);
+		display: flex;
+		align-items: center;
+		color: white; /* Adjust as needed */
+		text-decoration: none;
+	}
+
+	.number {
+		font-weight: bold;
+		margin-right: 8px;
+	}
+
+	/* Hide the mobile toggle button on desktop */
+	.nav-toggle {
+		display: none;
+	}
+
+	.desktop-line {
+		display: none; /* Will be shown only in desktop view if needed */
 	}
 }
