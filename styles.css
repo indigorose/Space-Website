@@ -78,7 +78,7 @@ body {
 }
 
 /* Layout guide */
-main,
+/* main,
 div,
 nav,
 footer,
@@ -93,12 +93,20 @@ ul,
 li,
 img {
 	border: var(--pencil);
+} */
+
+a {
+	word-spacing: var(--spacing-1200);
 }
 
 /* Mobile first styling */
 /* Font presets - 1, 2, 3, 4, 6, 8, 9 */
 
 /* Navigation - mobile */
+.navigation-container {
+	display: none;
+}
+
 .nav-header {
 	display: flex;
 	justify-content: space-between;
@@ -697,20 +705,28 @@ img {
 	.nav-links {
 		display: none;
 	}
+	.navigation-container {
+		display: flex;
+		flex-direction: row;
+		width: 640px;
+	}
+
 	.navigation-links {
 		position: absolute;
 		right: 0;
 		bottom: 0;
 		height: 96px;
 		display: flex;
+		gap: var(--spacing-150);
 		align-items: flex-end;
 		background: rgba(255, 255, 255, 0.04); /* Grey blur effect */
 		backdrop-filter: blur(10px); /* Creates the blur effect */
 		-webkit-backdrop-filter: blur(10px); /* For Safari support */
 		margin: 0;
+		list-style-type: none;
 	}
 
-	.navigation-links a {
+	.navigation-link a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -725,7 +741,8 @@ img {
 		width: fit-content;
 		margin-bottom: 0 !important;
 		text-align: center;
-		padding: 0; /* Optional: add horizontal space between links */
+		padding: 0;
+		/* Optional: add horizontal space between links */
 	}
 	.navigation-link:hover {
 		color: var(--blue-300);
@@ -859,67 +876,71 @@ img {
 	}
 
 	.nav-header {
-		display: flex;
-		align-items: center;
-		width: 736px;
+		padding-left: 0;
 	}
-
 	.logo {
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		width: 48px;
-		height: 48px;
-		margin: 0; /* Horizontally centers the logo */
+		padding: 0;
+		margin: 0;
 	}
 
-	.logo img {
-		width: 100%;
-		height: auto;
+	.navigation-container {
+		display: flex;
 	}
 
-	.nav-links {
+	.navigation-links {
 		position: absolute;
 		right: 0;
 		bottom: 0;
 		height: 96px;
 		display: flex;
-		align-items: flex-end;
-		padding: 20px; /* Adjust as needed */
+		flex-direction: row;
+		gap: var(--spacing-600);
 		background: rgba(255, 255, 255, 0.04); /* Grey blur effect */
 		backdrop-filter: blur(10px); /* Creates the blur effect */
 		-webkit-backdrop-filter: blur(10px); /* For Safari support */
+		margin: 0;
+		list-style-type: none;
+		width: 736px;
+	}
+	.navigation-link {
+		float: right;
 	}
 
-	.nav-links::before {
-		content: '';
-		position: absolute;
-		left: -50%; /* Adjust to position the line correctly */
-		top: 50%;
-		width: 100vw; /* Makes the line span the viewport width */
-		height: 1px;
-		background: rgba(255, 255, 255, 0.2); /* Desktop line color */
-		z-index: -1;
-	}
-
-	.nav-link {
-		margin-left: 24px; /* Space between nav items */
-	}
-
-	.nav-link a {
+	.navigation-link a {
 		display: flex;
 		align-items: center;
-		color: white; /* Adjust as needed */
+		justify-content: center;
 		text-decoration: none;
+		color: var(--white);
+		font-family: 'Barlow-Condensed', sans-serif;
+		font-weight: 400;
+		letter-spacing: var(--letter-spacing-1);
+		text-transform: uppercase;
+		font-size: var(--fs-8);
+		height: 96px;
+		margin-bottom: 0 !important;
+		text-align: center;
+		padding: 0;
+		word-spacing: var(--spacing-300);
+		/* Optional: add horizontal space between links */
+	}
+	.navigation-link:hover {
+		color: var(--blue-300);
+		border-bottom: var(--spacing-25) solid var(--white);
 	}
 
+	.navigation-link:active {
+		color: var(--white);
+		border-bottom: var(--spacing-50) solid var(--white);
+	}
 	.number {
-		font-weight: bold;
-		margin-right: 8px;
+		font-weight: 600;
 	}
-
 	/* Hide the mobile toggle button on desktop */
-	.nav-toggle {
+	.nav-toggle,
+	.nav-links {
 		display: none;
 	}
 
