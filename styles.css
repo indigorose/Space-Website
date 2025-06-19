@@ -78,7 +78,7 @@ body {
 }
 
 /* Layout guide */
-/* main,
+main,
 div,
 nav,
 footer,
@@ -93,7 +93,7 @@ ul,
 li,
 img {
 	border: var(--pencil);
-} */
+}
 
 a {
 	word-spacing: var(--spacing-1200);
@@ -718,6 +718,7 @@ a {
 		height: 96px;
 		display: flex;
 		gap: var(--spacing-150);
+
 		align-items: flex-end;
 		background: rgba(255, 255, 255, 0.04); /* Grey blur effect */
 		backdrop-filter: blur(10px); /* Creates the blur effect */
@@ -876,7 +877,11 @@ a {
 	}
 
 	.nav-header {
-		padding-left: 0;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: fit-content;
+		padding: 1.5rem 2rem;
 	}
 	.logo {
 		display: flex;
@@ -903,9 +908,7 @@ a {
 		margin: 0;
 		list-style-type: none;
 		width: 736px;
-	}
-	.navigation-link {
-		float: right;
+		padding: 0 var(--spacing-400) 0 var(--spacing-1000);
 	}
 
 	.navigation-link a {
@@ -919,11 +922,11 @@ a {
 		letter-spacing: var(--letter-spacing-1);
 		text-transform: uppercase;
 		font-size: var(--fs-8);
-		height: 96px;
+		height: 94px;
 		margin-bottom: 0 !important;
 		text-align: center;
 		padding: 0;
-		word-spacing: var(--spacing-300);
+
 		/* Optional: add horizontal space between links */
 	}
 	.navigation-link:hover {
@@ -937,6 +940,7 @@ a {
 	}
 	.number {
 		font-weight: 600;
+		padding-right: var(--spacing-150);
 	}
 	/* Hide the mobile toggle button on desktop */
 	.nav-toggle,
@@ -945,6 +949,21 @@ a {
 	}
 
 	.desktop-line {
-		display: none; /* Will be shown only in desktop view if needed */
+		display: inline;
+		width: 736px;
+		margin-left: 10px; /* Will be shown only in desktop view if needed */
+	}
+
+	.hero {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.hero-text-container {
+		align-items: flex-start;
+	}
+
+	.hero-description {
+		text-align: left;
 	}
 }
