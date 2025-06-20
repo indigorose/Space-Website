@@ -75,6 +75,7 @@ body {
 	padding: 0;
 	font-family: 'Barlow', sans-serif;
 	color: var(--white);
+	font-size: 14px;
 }
 
 /* Layout guide */
@@ -156,6 +157,7 @@ a {
 .nav-link:first-of-type {
 	margin-top: var(--spacing-600);
 }
+
 .nav-link {
 	list-style-type: none;
 	width: 100%;
@@ -175,6 +177,7 @@ a {
 .nav-link:hover {
 	border-bottom: var(--spacing-25) solid var(--white);
 }
+
 .number {
 	font-weight: 600;
 	padding-right: 2px;
@@ -351,6 +354,7 @@ a {
 	padding: var(--spacing-300) 0;
 	margin-bottom: var(--spacing-400);
 }
+
 .planet-image {
 	width: 150px;
 	height: 150px;
@@ -387,6 +391,7 @@ a {
 	letter-spacing: var(--letter-spacing-2);
 	text-transform: uppercase;
 }
+
 .planet-link a:hover {
 	color: var(--white);
 }
@@ -394,9 +399,11 @@ a {
 .planet-link:hover {
 	border-bottom: var(--spacing-25) solid var(--white);
 }
+
 .planet-link:active {
 	color: var(--white);
 }
+
 .planet-link:focus {
 	color: var(--white);
 }
@@ -408,6 +415,7 @@ a {
 	align-items: center;
 	text-align: center;
 }
+
 .planet-name {
 	font-family: 'Bellefair', sans-serif;
 	font-weight: 400;
@@ -443,9 +451,11 @@ a {
 	padding: 0;
 	margin: 0;
 }
+
 .planet-distance-time p {
 	margin: 0;
 }
+
 .distance,
 .time {
 	font-family: 'Barlow-Condensed', sans-serif;
@@ -531,6 +541,7 @@ a {
 	padding: 0 0 var(--spacing-300) 0;
 	gap: var(--spacing-200);
 }
+
 .pagination-item {
 	display: inline-block;
 	padding: 0;
@@ -574,6 +585,7 @@ a {
 	font-weight: 400;
 	padding-bottom: var(--spacing-300);
 }
+
 .technology-number {
 	color: var(--grey);
 	font-weight: 600;
@@ -602,6 +614,7 @@ a {
 	padding: var(--spacing-300) 0;
 	list-style-type: none;
 }
+
 .pagination-tech-item {
 	display: inline-block;
 	padding: 10px 0;
@@ -705,6 +718,7 @@ a {
 	.nav-links {
 		display: none;
 	}
+	
 	.navigation-container {
 		display: flex;
 		flex-direction: row;
@@ -718,7 +732,6 @@ a {
 		height: 96px;
 		display: flex;
 		gap: var(--spacing-150);
-
 		align-items: flex-end;
 		background: rgba(255, 255, 255, 0.04); /* Grey blur effect */
 		backdrop-filter: blur(10px); /* Creates the blur effect */
@@ -745,6 +758,7 @@ a {
 		padding: 0;
 		/* Optional: add horizontal space between links */
 	}
+	
 	.navigation-link:hover {
 		color: var(--blue-300);
 		border-bottom: var(--spacing-25) solid var(--white);
@@ -754,6 +768,7 @@ a {
 		color: var(--white);
 		border-bottom: var(--spacing-50) solid var(--white);
 	}
+	
 	.number {
 		font-weight: 600;
 	}
@@ -777,6 +792,7 @@ a {
 		width: 512px;
 		margin: 0 auto;
 	}
+	
 	.hero-description {
 		font-size: var(--fs-9);
 	}
@@ -788,6 +804,7 @@ a {
 		height: 272px;
 		width: 512px;
 	}
+	
 	.hero-button {
 		width: 272px;
 		height: 272px;
@@ -883,6 +900,7 @@ a {
 		width: fit-content;
 		padding: 1.5rem 2rem;
 	}
+	
 	.logo {
 		display: flex;
 		align-items: center;
@@ -938,10 +956,12 @@ a {
 		color: var(--white);
 		border-bottom: var(--spacing-50) solid var(--white);
 	}
+	
 	.number {
 		font-weight: 600;
 		padding-right: var(--spacing-150);
 	}
+	
 	/* Hide the mobile toggle button on desktop */
 	.nav-toggle,
 	.nav-links {
