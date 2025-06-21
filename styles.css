@@ -718,7 +718,7 @@ a {
 	.nav-links {
 		display: none;
 	}
-	
+
 	.navigation-container {
 		display: flex;
 		flex-direction: row;
@@ -758,7 +758,7 @@ a {
 		padding: 0;
 		/* Optional: add horizontal space between links */
 	}
-	
+
 	.navigation-link:hover {
 		color: var(--blue-300);
 		border-bottom: var(--spacing-25) solid var(--white);
@@ -768,7 +768,7 @@ a {
 		color: var(--white);
 		border-bottom: var(--spacing-50) solid var(--white);
 	}
-	
+
 	.number {
 		font-weight: 600;
 	}
@@ -792,7 +792,7 @@ a {
 		width: 512px;
 		margin: 0 auto;
 	}
-	
+
 	.hero-description {
 		font-size: var(--fs-9);
 	}
@@ -804,7 +804,7 @@ a {
 		height: 272px;
 		width: 512px;
 	}
-	
+
 	.hero-button {
 		width: 272px;
 		height: 272px;
@@ -851,7 +851,9 @@ a {
 		padding: 0;
 		background-image: url(./assets/home/background-home-desktop.jpg);
 		background-repeat: no-repeat;
-		background-size: 1440px 888px;
+		background-size: 1440px 1024px;
+		width: 1440px;
+		height: 1024px;
 	}
 
 	/* Destination desktop */
@@ -860,7 +862,7 @@ a {
 		padding: 0;
 		background-image: url(./assets/destination/background-destination-desktop.jpg);
 		background-repeat: no-repeat;
-		background-size: 1440px 888px;
+		background-size: 1440px 1024px;
 	}
 
 	/* Crew desktop */
@@ -870,7 +872,7 @@ a {
 		padding: 0;
 		background-image: url(./assets/crew/background-crew-tablet.jpg);
 		background-repeat: no-repeat;
-		background-size: 1440px 888px;
+		background-size: 1440px 1024px;
 	}
 
 	/* Technology desktop */
@@ -880,7 +882,7 @@ a {
 		padding: 0;
 		background-image: url(./assets/technology/background-technology-tablet.jpg);
 		background-repeat: no-repeat;
-		background-size: 1440px 888px;
+		background-size: 1440px 1024px;
 	}
 
 	/* Navigation */
@@ -900,7 +902,7 @@ a {
 		width: fit-content;
 		padding: 1.5rem 2rem;
 	}
-	
+
 	.logo {
 		display: flex;
 		align-items: center;
@@ -956,12 +958,12 @@ a {
 		color: var(--white);
 		border-bottom: var(--spacing-50) solid var(--white);
 	}
-	
+
 	.number {
 		font-weight: 600;
 		padding-right: var(--spacing-150);
 	}
-	
+
 	/* Hide the mobile toggle button on desktop */
 	.nav-toggle,
 	.nav-links {
@@ -974,10 +976,20 @@ a {
 		margin-left: 10px; /* Will be shown only in desktop view if needed */
 	}
 
+	.main-content {
+		padding: 0;
+	}
+
+	.hero-desktop {
+		padding: 128px 0;
+	}
+
 	.hero {
 		display: flex;
 		flex-direction: row;
-		align-items: center;
+		align-items: flex-end;
+		width: 1110px;
+		height: 632px;
 	}
 	.hero-text-container {
 		align-items: flex-start;
