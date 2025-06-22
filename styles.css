@@ -976,6 +976,8 @@ a {
 		margin-left: 10px; /* Will be shown only in desktop view if needed */
 	}
 
+	/* Home Desktop layout */
+
 	.main-content {
 		padding: 0;
 	}
@@ -997,5 +999,33 @@ a {
 
 	.hero-description {
 		text-align: left;
+	}
+
+	/* Destination desktop layout */
+
+	.main-content {
+		height: 888px;
+		width: 1440px;
+		padding: 48px 0;
+	}
+
+	.destination-hero-container {
+		height: 792px;
+		width: 1110px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 0;
+	}
+
+	.destination-hero {
+		margin: 0;
+		justify-self: flex-start;
+	}
+
+	.planet-container {
+		display: flex;
+		flex-direction: row;
 	}
 }
