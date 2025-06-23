@@ -1014,7 +1014,7 @@ a {
 		width: 1110px;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-start;
+		justify-content: center;
 		align-items: flex-start;
 		padding: 0;
 	}
@@ -1027,5 +1027,87 @@ a {
 	.planet-container {
 		display: flex;
 		flex-direction: row;
+		gap: var(--spacing-400);
+		height: 734px;
+	}
+	.planet-image-container {
+		height: 100%;
+		width: 539px;
+		margin: 0;
+	}
+
+	.planet-image {
+		height: 480px;
+		width: 480px;
+	}
+
+	.planet-info-container {
+		width: 539px;
+		height: 734px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.planet-info {
+		height: 445px;
+		width: 468px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	.planet-links {
+		align-self: flex-start;
+		gap: var(--spacing-400);
+		margin: 0;
+		padding: 0;
+	}
+
+	.planet-description {
+		margin-top: var(--spacing-200);
+		text-align: justify;
+		word-spacing: var(--letter-spacing-1);
+		font-size: var(--fs-9);
+	}
+
+	.planet-distance {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		width: 100%;
+		gap: var(--spacing-400);
+		margin: 0;
+		padding: 0;
+	}
+
+	.distance {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+		justify-self: start;
+		align-self: start;
+	}
+
+	.distance-number {
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+		justify-self: start;
+		align-self: end;
+	}
+
+	.time {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		justify-self: start;
+		align-self: start;
+	}
+
+	.time-number {
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+		justify-self: start;
+		align-self: end;
 	}
 }
