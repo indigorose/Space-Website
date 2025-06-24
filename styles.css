@@ -1073,7 +1073,7 @@ a {
 		font-size: var(--fs-9);
 	}
 
-	.planet-distance {
+	.planet-distance-time {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
@@ -1083,31 +1083,10 @@ a {
 		padding: 0;
 	}
 
-	.distance {
-		grid-column: 1 / 2;
-		grid-row: 1 / 2;
-		justify-self: start;
-		align-self: start;
-	}
-
-	.distance-number {
-		grid-column: 1 / 2;
-		grid-row: 2 / 3;
-		justify-self: start;
-		align-self: end;
-	}
-
-	.time {
-		grid-column: 2 / 3;
-		grid-row: 1 / 2;
-		justify-self: start;
-		align-self: start;
-	}
-
-	.time-number {
-		grid-column: 2 / 3;
-		grid-row: 2 / 3;
-		justify-self: start;
-		align-self: end;
+	.planet-distance,
+	.planet-time {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 }
