@@ -972,8 +972,8 @@ a {
 
 	.desktop-line {
 		display: inline;
-		width: 736px;
-		margin-left: 10px; /* Will be shown only in desktop view if needed */
+		width: 575px;
+		margin-left: 75px; /* Will be shown only in desktop view if needed */
 	}
 
 	/* Home Desktop layout */
