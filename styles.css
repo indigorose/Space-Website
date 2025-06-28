@@ -850,10 +850,9 @@ a {
 		margin: 0;
 		padding: 0;
 		background-image: url(./assets/home/background-home-desktop.jpg);
-		background-repeat: no-repeat;
-		background-size: 1440px 1024px;
-		width: 1440px;
-		height: 1024px;
+		background-size: cover;
+		min-width: 1440px;
+		min-height: 1024px;
 	}
 
 	/* Destination desktop */
@@ -861,8 +860,9 @@ a {
 		margin: 0;
 		padding: 0;
 		background-image: url(./assets/destination/background-destination-desktop.jpg);
-		background-repeat: no-repeat;
-		background-size: 1440px 1024px;
+		background-size: cover;
+		min-width: 1440px;
+		min-height: 1024px;
 	}
 
 	/* Crew desktop */
@@ -871,8 +871,9 @@ a {
 		margin: 0;
 		padding: 0;
 		background-image: url(./assets/crew/background-crew-tablet.jpg);
-		background-repeat: no-repeat;
-		background-size: 1440px 1024px;
+		background-size: cover;
+		min-width: 1440px;
+		min-height: 1024px;
 	}
 
 	/* Technology desktop */
@@ -881,8 +882,9 @@ a {
 		margin: 0;
 		padding: 0;
 		background-image: url(./assets/technology/background-technology-tablet.jpg);
-		background-repeat: no-repeat;
-		background-size: 1440px 1024px;
+		background-size: cover;
+		min-width: 1440px;
+		min-height: 1024px;
 	}
 
 	/* Navigation */
