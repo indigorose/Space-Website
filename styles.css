@@ -685,7 +685,7 @@ a {
 		margin: 0;
 		padding: 0;
 		background-image: url(./assets/home/background-home-tablet.jpg);
-		background-repeat: no-repeat;
+		background-repeat: cover;
 		background-size: 768px 1024px;
 	}
 
@@ -815,7 +815,7 @@ a {
 		margin: 0;
 		padding: 0;
 		background-image: url(./assets/destination/background-destination-tablet.jpg);
-		background-repeat: no-repeat;
+		background-repeat: cover;
 		background-size: 768px 1024px;
 	}
 
@@ -825,7 +825,7 @@ a {
 		margin: 0;
 		padding: 0;
 		background-image: url(./assets/crew/background-crew-tablet.jpg);
-		background-repeat: no-repeat;
+		background-repeat: cover;
 		background-size: 768px 1024px;
 	}
 
@@ -835,7 +835,7 @@ a {
 		margin: 0;
 		padding: 0;
 		background-image: url(./assets/technology/background-technology-tablet.jpg);
-		background-repeat: no-repeat;
+		background-repeat: cover;
 		background-size: 768px 1024px;
 	}
 }
