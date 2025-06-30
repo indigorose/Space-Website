@@ -20,12 +20,9 @@
 			<header>
 				<div class="nav-header">
 					<a href="./index.html" class="logo">
-						<img
-							src="./assets/shared/logo.svg"
-							alt="logo"
-							class="logo"
-						/>
+						<img src="./assets/shared/logo.svg" alt="logo" />
 					</a>
+					<hr class="desktop-line" />
 					<button class="nav-toggle" id="open-nav">
 						<img
 							src="./assets/shared/icon-hamburger.svg"
@@ -34,37 +31,59 @@
 						/>
 					</button>
 				</div>
-				<nav class="nav-menu">
-					<ul class="nav-links" id="nav-links">
-						<button class="cross" id="close-nav">
-							<img
-								src="./assets/shared/icon-close.svg"
-								alt="logo"
-								class="logo"
-							/>
-						</button>
-						<li class="nav-link">
-							<a href="./index.html"
-								><span class="number">00 </span> Home</a
-							>
-						</li>
-						<li class="nav-link">
-							<a href="./destination-moon.html"
-								><span class="number">01 </span> Destination</a
-							>
-						</li>
-						<li class="nav-link">
-							<a href="./crew-commander.html"
-								><span class="number">02 </span> Crew</a
-							>
-						</li>
-						<li class="nav-link">
-							<a href="./technology-vehicle.html"
-								><span class="number">03 </span> Technology</a
-							>
-						</li>
-					</ul>
-				</nav>
+				<!-- mobile navigation -->
+				<ul class="nav-links" id="nav-links">
+					<button class="cross" id="close-nav">
+						<img
+							src="./assets/shared/icon-close.svg"
+							alt="logo"
+							class="close-logo"
+						/>
+					</button>
+					<li class="nav-link">
+						<a href="./index.html"
+							><span class="number">00</span>Home</a
+						>
+					</li>
+					<li class="nav-link">
+						<a href="./destination-moon.html"
+							><span class="number">01</span>Destination</a
+						>
+					</li>
+					<li class="nav-link">
+						<a href="./crew-commander.html"
+							><span class="number">02</span>Crew</a
+						>
+					</li>
+					<li class="nav-link nav-link-active">
+						<a href="./technology-vehicle.html"
+							><span class="number">03</span>Technology</a
+						>
+					</li>
+				</ul>
+				<!-- tablet and desktop navigation -->
+				<ul class="navigation-links" id="navigation-links">
+					<li class="navigation-link">
+						<a href="./index.html"
+							><span class="number">00 </span>Home</a
+						>
+					</li>
+					<li class="navigation-link">
+						<a href="./destination-moon.html"
+							><span class="number">01</span> Destination</a
+						>
+					</li>
+					<li class="navigation-link">
+						<a href="./crew-commander.html"
+							><span class="number">02</span> Crew</a
+						>
+					</li>
+					<li class="navigation-link">
+						<a href="./technology-vehicle.html"
+							><span class="number">03</span> Technology</a
+						>
+					</li>
+				</ul>
 			</header>
 			<section class="technology">
 				<div class="technology-header">
@@ -76,7 +95,7 @@
 				<div class="technology-description-container">
 					<div class="tech-image">
 						<img
-							src="./assets/technology/image-spaceport-landscape.jpg"
+							src="./assets/technology/image-spaceport-portrait.jpg"
 							alt=""
 						/>
 					</div>

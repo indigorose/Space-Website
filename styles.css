@@ -39,7 +39,7 @@
 	--grey: hsl(0, 0%, 59.2%);
 	--shadow: rgba(239, 239, 240, 0.2);
 	--white: hsl(0, 0%, 100%);
-	--pencil: 1px solid hsl(276, 77%, 58%);
+	--pencil: 0.25px solid hsl(276, 77%, 58%);
 	/* Font Size */
 	--fs-1: clamp(5rem, 3.5915rem + 6.0094vw, 9rem);
 	--fs-2: clamp(3.5rem, 2.6197rem + 3.7559vw, 6rem);
@@ -104,8 +104,15 @@ a {
 /* Font presets - 1, 2, 3, 4, 6, 8, 9 */
 
 /* Navigation - mobile */
-.navigation-container {
-	display: none;
+.mobile {
+	margin: 0;
+	padding: 0;
+	background-color: var(--blue-900);
+	background-image: url('./assets/home/background-home-mobile.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-width: 375px;
+	min-height: 812px;
 }
 
 .nav-header {
@@ -114,15 +121,6 @@ a {
 	align-items: center;
 	padding: 1.5rem 2rem;
 	height: 88px;
-}
-
-.mobile {
-	margin: 0;
-	padding: 0;
-	background-color: var(--blue-900);
-	background-image: url('./assets/home/background-home-mobile.jpg');
-	background-repeat: no-repeat;
-	background-size: 375px 812px;
 }
 
 .logo img {
@@ -161,6 +159,7 @@ a {
 .nav-link {
 	list-style-type: none;
 	width: 100%;
+	margin-bottom: var(--spacing-400);
 }
 
 .nav-link a {
@@ -171,16 +170,18 @@ a {
 	font-size: var(--fs-8);
 	letter-spacing: 2.7px;
 	width: 100%;
-	word-spacing: var(--spacing-200);
 }
 
 .nav-link:hover {
-	border-bottom: var(--spacing-25) solid var(--white);
+	border-right: var(--spacing-25) solid var(--white);
+}
+.nav-link-active {
+	border-right: var(--spacing-25) solid var(--white);
 }
 
 .number {
 	font-weight: 600;
-	padding-right: 2px;
+	padding-right: 12px;
 }
 
 .nav-links.open {
@@ -211,9 +212,18 @@ a {
 	align-self: flex-end;
 	z-index: 1101;
 	margin-bottom: var(--spacing-400);
+	padding-right: var(--spacing-400);
+}
+
+.navigation-links {
+	display: none;
 }
 
 /* Main Content */
+
+.main-content {
+	height: 724px;
+}
 
 .hero-container {
 	display: flex;
@@ -221,7 +231,7 @@ a {
 }
 
 .hero {
-	padding: var(--spacing-300);
+	padding: 0;
 	margin: 0;
 }
 
@@ -251,7 +261,8 @@ a {
 	text-transform: uppercase;
 	color: var(--white);
 	font-size: var(--fs-1);
-	margin: var(--spacing-300) 0;
+	padding: var(--spacing-300) 0;
+	margin: 0;
 }
 
 .hero-description {
@@ -597,12 +608,11 @@ a {
 	height: 322px;
 }
 
-.tech-image-landscape {
+.tech-image-landscape img {
 	position: absolute;
 	bottom: 0;
 	width: 378px;
 	height: 258px;
-	object-fit: cover;
 }
 
 .tech-pagination {
