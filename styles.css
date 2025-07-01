@@ -582,6 +582,14 @@ a {
 }
 
 /* Technology Pages */
+
+/* Mobile styling */
+
+.technology {
+	height: 792px;
+	width: 375px;
+}
+
 .technology-hero {
 	display: flex;
 	flex-direction: row;
@@ -603,16 +611,22 @@ a {
 }
 
 .tech-image {
-	display: inline-block;
-	position: relative;
-	height: 322px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 100vw;
+	margin: 0 auto;
+	height: 327px; /* Match the image height */
+	overflow: hidden; /* Prevent overflow if image is larger */
 }
 
-.tech-image-landscape img {
-	position: absolute;
-	bottom: 0;
-	width: 378px;
+.tech-image img {
+	width: 102vw;
 	height: 258px;
+	object-fit: cover;
+	margin-right: 10px;
+	flex-shrink: 0;
+	display: block;
 }
 
 .tech-pagination {
@@ -697,6 +711,9 @@ a {
 		background-image: url(./assets/home/background-home-tablet.jpg);
 		background-repeat: cover;
 		background-size: 768px 1024px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	.nav-toggle,
