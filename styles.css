@@ -710,10 +710,10 @@ a {
 		padding: 0;
 		background-image: url(./assets/home/background-home-tablet.jpg);
 		background-repeat: cover;
-		background-size: 768px 1024px;
+		min-width: 768px;
+		min-height: 1024px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 	}
 
 	.nav-toggle,
@@ -798,6 +798,10 @@ a {
 
 	.number {
 		font-weight: 600;
+	}
+
+	.main-content {
+		height: 1024px;
 	}
 
 	.hero-container {
