@@ -96,10 +96,6 @@ img {
 	border: var(--pencil);
 }
 
-a {
-	word-spacing: var(--spacing-1200);
-}
-
 /* Mobile first styling */
 /* Font presets - 1, 2, 3, 4, 6, 8, 9 */
 
@@ -727,18 +723,18 @@ a {
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		padding-left: var(--spacing-500);
 		height: 96px;
 		position: relative;
 	}
 
 	.nav-header {
-		padding-left: 0;
+		padding-left: var(--spacing-200);
+		width: 160px;
 	}
 	.logo {
 		display: flex;
 		align-items: center;
-		padding: 0;
+		padding-left: 40px;
 		margin: 0;
 	}
 
@@ -746,20 +742,17 @@ a {
 		display: none;
 	}
 
-	.navigation-container {
-		display: flex;
-		flex-direction: row;
-		width: 640px;
-	}
-
 	.navigation-links {
 		position: absolute;
 		right: 0;
 		bottom: 0;
+		padding: 0 40px 0 60px;
 		height: 96px;
+		width: 645px;
 		display: flex;
-		gap: var(--spacing-150);
+		gap: var(--spacing-500);
 		align-items: flex-end;
+		justify-content: flex-end;
 		background: rgba(255, 255, 255, 0.04); /* Grey blur effect */
 		backdrop-filter: blur(10px); /* Creates the blur effect */
 		-webkit-backdrop-filter: blur(10px); /* For Safari support */
@@ -770,7 +763,7 @@ a {
 	.navigation-link a {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-end;
 		text-decoration: none;
 		color: var(--white);
 		font-family: 'Barlow-Condensed', sans-serif;
@@ -798,6 +791,7 @@ a {
 
 	.number {
 		font-weight: 600;
+		padding-right: 8px;
 	}
 
 	.main-content {
@@ -846,8 +840,53 @@ a {
 		margin: 0;
 		padding: 0;
 		background-image: url(./assets/destination/background-destination-tablet.jpg);
-		background-repeat: cover;
-		background-size: 768px 1024px;
+		background-size: cover;
+		min-width: 768px;
+		min-height: 1024px;
+	}
+
+	.main-content {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.destination-hero-container {
+		padding: var(--spacing-300);
+	}
+
+	.destination-hero {
+		width: 100%;
+	}
+	.destination-hero h1 {
+		margin-left: var(--spacing-300);
+	}
+	.planet-container {
+		width: 786px;
+		padding: var(--spacing-300);
+	}
+	.planet-image-container img {
+		width: 300px;
+		height: 300px;
+	}
+
+	.planet-info {
+		width: 514px;
+		margin: 0 auto;
+	}
+
+	.planet-links {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: var(--spacing-300);
+	}
+
+	.planet-distance-time {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--spacing-300);
 	}
 
 	/* Crew tablet */
@@ -867,7 +906,8 @@ a {
 		padding: 0;
 		background-image: url(./assets/technology/background-technology-tablet.jpg);
 		background-repeat: cover;
-		background-size: 768px 1024px;
+		min-width: 768px;
+		min-height: 1024px;
 	}
 }
 
