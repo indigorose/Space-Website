@@ -308,18 +308,24 @@ img {
 .destination-mobile {
 	background-image: url('./assets/destination/background-destination-mobile.jpg');
 	background-repeat: no-repeat;
-	background-size: 375px 900px;
+	background-size: cover;
+	min-width: 375px;
+	min-height: 900px;
 }
 
 .crew-mobile {
 	background-image: url('./assets/crew/background-crew-mobile.jpg');
 	background-repeat: no-repeat;
-	background-size: 375px 900px;
+	background-size: cover;
+	min-width: 375px;
+	min-height: 900px;
 }
 .technology-mobile {
 	background-image: url('./assets/technology/background-technology-mobile.jpg');
 	background-repeat: no-repeat;
-	background-size: 375px 900px;
+	background-size: cover;
+	min-width: 375px;
+	min-height: 900px;
 }
 
 .main-content {
@@ -853,18 +859,18 @@ img {
 	}
 
 	.destination-hero-container {
-		padding: var(--spacing-300);
+		padding: var(--spacing-500);
 	}
 
 	.destination-hero {
 		width: 100%;
 	}
 	.destination-hero h1 {
-		margin-left: var(--spacing-300);
+		width: 705px;
 	}
 	.planet-container {
 		width: 786px;
-		padding: var(--spacing-300);
+		padding: var(--spacing-500);
 	}
 	.planet-image-container img {
 		width: 300px;
@@ -881,6 +887,7 @@ img {
 		display: flex;
 		justify-content: center;
 		gap: var(--spacing-300);
+		margin-bottom: var(--spacing-300);
 	}
 
 	.planet-distance-time {
@@ -895,8 +902,28 @@ img {
 		margin: 0;
 		padding: 0;
 		background-image: url(./assets/crew/background-crew-tablet.jpg);
-		background-repeat: cover;
-		background-size: 768px 1024px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-width: 768px;
+		min-height: 1024px;
+	}
+
+	.crew-explanation {
+		width: 512px;
+		padding-top: var(--spacing-500);
+	}
+
+	.crew-explanation h2 {
+		font-size: 24px;
+		padding-bottom: var(--spacing-200);
+	}
+
+	.crew-explanation > .rank-name > .name {
+		font-size: 40px;
+	}
+
+	.crew-image-container img {
+		height: 560px;
 	}
 
 	/* Technology tablet */
@@ -905,7 +932,8 @@ img {
 		margin: 0;
 		padding: 0;
 		background-image: url(./assets/technology/background-technology-tablet.jpg);
-		background-repeat: cover;
+		background-repeat: no-repeat;
+		background-size: cover;
 		min-width: 768px;
 		min-height: 1024px;
 	}
