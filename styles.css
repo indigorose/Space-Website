@@ -926,6 +926,11 @@ img {
 		height: 560px;
 	}
 
+	.ansari-image {
+		margin: 0 auto;
+		width: 501px;
+	}
+
 	/* Technology tablet */
 
 	.tech-tablet {
