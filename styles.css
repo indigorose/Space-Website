@@ -942,6 +942,20 @@ img {
 		min-width: 768px;
 		min-height: 1024px;
 	}
+
+	.technology {
+		width: 100%;
+	}
+	.technology-hero {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		padding: 0 var(--spacing-400);
+	}
+
+	.technology-hero h1 {
+		float: left;
+	}
 }
 
 /* Desktop */
