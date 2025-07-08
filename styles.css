@@ -956,6 +956,13 @@ img {
 	.technology-hero h1 {
 		float: left;
 	}
+
+	.tech-image {
+		height: 421px;
+	}
+	.tech-image img {
+		height: 357px;
+	}
 }
 
 /* Desktop */
