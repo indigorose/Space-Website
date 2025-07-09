@@ -631,6 +631,10 @@ img {
 	display: block;
 }
 
+.tech-image-landscape {
+	display: none;
+}
+
 .tech-pagination {
 	display: flex;
 	justify-content: center;
@@ -959,9 +963,30 @@ img {
 
 	.tech-image {
 		height: 421px;
+		padding-bottom: var(--spacing-300);
+		display: inline;
 	}
 	.tech-image img {
 		height: 357px;
+		vertical-align: middle;
+		padding-top: var(--spacing-800);
+	}
+	.description-container {
+		margin: 0 auto;
+		width: 512px;
+	}
+	.tech-pagination {
+		width: 512px;
+		height: 56px;
+		margin: 0 auto;
+		margin-bottom: var(--spacing-300);
+	}
+	.pagination-tech-item {
+		height: 56px;
+		width: 56px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
