@@ -452,8 +452,8 @@ img {
 .line {
 	width: 100%;
 	height: 1px;
-	background-color: var(--blue-300);
-	margin: var(--spacing-300) 0;
+	border-bottom: 0.5px solid var(--grey);
+	margin: var(--spacing-500) 0;
 }
 
 .planet-distance-time {
@@ -1024,6 +1024,53 @@ img {
 		background-size: cover;
 		min-width: 1440px;
 		min-height: 1024px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.crew {
+		width: 1440px;
+		height: 888px;
+		display: flex;
+		margin: 0 auto;
+	}
+
+	.destination-hero-container {
+		margin: var(--spacing-500) auto;
+	}
+
+	.destination-hero {
+		height: 58px;
+	}
+
+	.rank-name {
+		margin-top: var(--spacing-1200);
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.description {
+		text-align: left;
+	}
+
+	.pagination-list {
+		padding-top: var(--spacing-500);
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.crew-hero {
+		display: flex;
+		flex-direction: row;
+		gap: var(--spacing-400);
+		height: 734px;
+		width: 1110px;
+	}
+
+	.crew-image-container img {
+		height: 676px;
+		width: 539.28px;
+		margin: 0 auto;
 	}
 
 	/* Technology desktop */
@@ -1153,6 +1200,12 @@ img {
 		text-align: left;
 	}
 
+	.hero-button-container {
+		margin-bottom: var(--spacing-400);
+		display: flex;
+		justify-content: flex-end;
+	}
+
 	/* Destination desktop layout */
 
 	.main-content {
@@ -1175,12 +1228,16 @@ img {
 		margin: 0;
 		justify-self: flex-start;
 	}
+	.destination-hero h1 {
+		margin: 0;
+	}
 
 	.planet-container {
 		display: flex;
 		flex-direction: row;
 		gap: var(--spacing-400);
 		height: 734px;
+		width: 100%;
 	}
 	.planet-image-container {
 		height: 100%;
@@ -1188,14 +1245,14 @@ img {
 		margin: 0;
 	}
 
-	.planet-image {
+	.planet-image-container img {
 		height: 480px;
 		width: 480px;
 	}
 
 	.planet-info-container {
 		width: 539px;
-		height: 734px;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -1212,7 +1269,7 @@ img {
 	}
 
 	.planet-links {
-		align-self: flex-start;
+		justify-content: flex-start;
 		gap: var(--spacing-400);
 		margin: 0;
 		padding: 0;
