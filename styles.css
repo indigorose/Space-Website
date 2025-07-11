@@ -1084,6 +1084,24 @@ img {
 		min-height: 1024px;
 	}
 
+	.technology {
+		width: 1275px;
+		height: 792px;
+		display: flex;
+		flex-direction: column;
+		padding: var(--spacing-600) 0 0 var(--spacing-1200);
+	}
+
+	.tech-image img {
+		display: none;
+	}
+	.tech-image-background {
+		width: 608px;
+		height: 600px;
+		background-image: url(./assets/technology/image-launch-vehicle-portrait.jpg);
+		background-size: cover;
+	}
+
 	/* Navigation */
 	header {
 		position: relative; /* Needed for absolute positioning of children */
