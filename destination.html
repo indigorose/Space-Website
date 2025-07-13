@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon-spacecraft-thumbnail.png"
+		/>
+		<link rel="stylesheet" href="styles-redesign.css" />
+		<title>Space tourism website</title>
+	</head>
+	<body>
+		<!--Header Navigation  -->
+		<header>
+			<nav class="navigation-menu">
+				<div class="nav-center">
+					<div class="mobile-menu">
+						<a
+							href="home.html"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src="./assets/shared/logo.svg"
+								alt="home logo"
+							/>
+						</a>
+						<button class="nav-toggle">
+							<img
+								src="./assets/shared/icon-hamburger.svg"
+								alt="menu open"
+							/>
+						</button>
+						<div class="desktop-line"></div>
+					</div>
+					<!-- links -->
+					<ul>
+						<button class="close-toggle">
+							<img
+								src="./assets/shared/icon-close.svg"
+								alt="close-btn"
+							/>
+						</button>
+						<li>
+							<a href=""> <span>00</span>Home </a>
+						</li>
+						<li>
+							<a href=""> <span>01</span>Destination </a>
+						</li>
+						<li>
+							<a href=""> <span>02</span>Crew </a>
+						</li>
+						<li>
+							<a href=""> <span>03</span>Technology </a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<section class="section destination-section">
+			<div class="content destination-content">
+				<div class="section-header destination page-title">
+					<p><span>01</span>Pick your destination</p>
+				</div>
+				<div class="section-content content destination">
+					<div class="section-content-image">
+						<img
+							src="./assets/destination/image-moon.webp"
+							alt="image-moon"
+							id="destination-img"
+						/>
+					</div>
+					<div
+						class="section-content-description destination-description"
+					>
+						<div class="explanation-container">
+							<div
+								class="destination destination-pagination"
+							></div>
+							<div class="destination-text-container">
+								<h1
+									class="destination-title"
+									id="destination-title"
+								>
+									Moon
+								</h1>
+								<p
+									class="destination-text"
+									id="destination-text"
+								></p>
+							</div>
+							<div class="line"></div>
+							<div class="destination-statistics-container">
+								<div class="statistics-distance">
+									<p>Avg. Distance</p>
+									<p
+										class="destination-distance"
+										id="destination-distance"
+									></p>
+								</div>
+								<div class="statistics-travel">
+									<p>Est. Travel Time</p>
+									<p
+										class="destination-time"
+										id="destination-time"
+									></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
