@@ -13,6 +13,67 @@
 // 	openNav.classList.remove('hide');
 // });
 
+// Destination Pagination
+
+document.addEventListener('DOMContentLoaded', () => {
+	let destinationData = [];
+
+	// Fetch the data.json file
+	fetch('data.json')
+		.then((response) => response.json())
+		.then((data) => {
+			destinationData = data.destinations;
+			setupPagination();
+			updateDestination(0); // This will show the first array item by default
+		});
+
+	function setupPagination() {
+		const paginationLinks = document.querySelectorAll('.pagination li a');
+		paginationLinks.forEach((link, idx) => {
+			link.addEventListener('click', function (e) {
+				e.preventDefault();
+				updateDestination(idx);
+				paginationLinks.forEach((l) =>
+					l.removeAttribute('aria-current')
+				);
+				this.setAttribute('aria-current', 'page');
+			});
+		});
+	}
+
+	function updateDestination(idx) {
+		const destination = destinationData[idx];
+		// Update the image as a background
+		const destinationImgDiv = document.getElementById('destination-img');
+		if (destinationImgDiv) {
+			destinationImgDiv.style.backgroundImage = `url('${destination.images.webp}')`;
+			destinationImgDiv.style.backgroundSize = 'cover';
+			destinationImgDiv.style.backgroundPosition = 'center';
+			destinationImgDiv.style.height = '258px';
+			destinationImgDiv.style.width = '258px';
+		}
+		// Update the name
+		const destinationName = document.getElementById('destination-name');
+		if (destinationName) destinationName.textContent = destination.name;
+		// Update the description
+		const destinationDescription = document.getElementById(
+			'destination-description'
+		);
+		if (destinationDescription)
+			destinationDescription.textContent = destination.description;
+		// Update the distance
+		const destinationDistance = document.getElementById(
+			'destination-distance'
+		);
+		if (destinationDistance)
+			destinationDistance.textContent = destination.distance;
+		// Update the travel time
+		const destinationTime = document.getElementById('destination-time');
+		if (destinationTime) destinationTime.textContent = destination.travel;
+	}
+	console.log('working');
+});
+
 // Crew Navigation
 
 document.addEventListener('DOMContentLoaded', () => {
