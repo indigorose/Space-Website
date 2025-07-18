@@ -1,11 +1,176 @@
-div {
-	border: 1px solid red;
-}
-
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+/* barlow-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Barlow';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/assets/fonts/barlow-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-condensed-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Barlow-Condensed';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/assets/fonts/barlow-condensed-v12-latin-regular.woff2')
+		format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* bellefair-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Bellefair';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/assets/fonts/bellefair-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+	/* Colors */
+	--blue-900: hsl(230, 35%, 7%);
+	--blue-300: hsl(231, 77%, 90%);
+	--grey: hsl(0, 0%, 59.2%);
+	--shadow: rgba(239, 239, 240, 0.2);
+	--white: hsl(0, 0%, 100%);
+	--pencil: 0.25px solid hsl(276, 100%, 90%);
+	/* Font Size */
+	--fs-1: clamp(5rem, 3.5915rem + 6.0094vw, 9rem);
+	--fs-2: clamp(3.5rem, 2.6197rem + 3.7559vw, 6rem);
+	--fs-3: clamp(1.5rem, 0.7958rem + 3.0047vw, 3.5rem);
+	--fs-4: clamp(1.125rem, 0.8169rem + 1.3146vw, 2rem);
+	--fs-5: clamp(1.25rem, 1.0739rem + 0.7512vw, 1.75rem); /* change font*/
+	--fs-d-6: 1.75rem;
+	--fs-6: clamp(1rem, 0.7359rem + 1.1268vw, 1.75rem);
+	--fs-7: 0.875rem; /* 14px - change font */
+	--fs-8: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem); /* can be bold */
+	--fs-9: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
+	/* Spacing */
+	--spacing-1600: 128px;
+	--spacing-1200: 96px;
+	--spacing-1000: 80px;
+	--spacing-800: 64px;
+	--spacing-600: 48px;
+	--spacing-500: 40px;
+	--spacing-400: 32px;
+	--spacing-300: 24px;
+	--spacing-200: 16px;
+	--spacing-150: 12px;
+	--spacing-100: 8px;
+	--spacing-50: 4px;
+	--spacing-25: 2px;
+	/* Letter Spacing */
+	--letter-spacing-1: 4px;
+	--letter-spacing-2: 2px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Barlow', sans-serif;
+	color: var(--white);
+	font-size: 14px;
+}
+
+/* Layout guide */
+main,
+div,
+nav,
+footer,
+header,
+section,
+article,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+img {
+	border: var(--pencil);
+}
+
+/* Mobile first styling */
+/* Font presets - 1, 2, 3, 4, 6, 8, 9 */
+
+/* Mobile first styling */
+
+/* Navigation Header */
+
+.mobile-background {
+	margin: 0;
+	padding: 0;
+	background-color: var(--blue-900);
+	background-image: url('./assets/home/background-home-mobile.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-width: 375px;
+	min-height: 812px;
+}
+
+.mobile-menu {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	height: 88px;
+}
+.desktop-line {
+	display: none;
+}
+
+.mobile-menu a {
+	padding-left: var(--spacing-300);
+	height: 48px;
+	width: 48px;
+	cursor: pointer;
+}
+.mobile-menu a img {
+	height: 48px;
+	width: 48px;
+}
+
+.nav-toggle {
+	background-color: transparent;
+	border: none;
+	height: 30px;
+	width: 30px;
+	display: flex;
+	justify-self: flex-end;
+	margin-right: var(--spacing-300);
+	cursor: pointer;
+}
+
+.nav-links {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 70vw;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(4px);
+	flex-direction: column;
+	align-items: flex-start;
+	padding: var(--spacing-400) 0 0 var(--spacing-400);
+	margin: 0;
+	transform: translateX(100%);
+	transition: transform 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+	z-index: 1000;
+	display: flex;
+	list-style-type: none;
+}
+
+.hide {
+	display: none !important;
+}
+
+.nav-links.open {
+	transform: translateX(0);
 }

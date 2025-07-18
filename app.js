@@ -1,17 +1,19 @@
 // // Navigation Interaction
-// const openNav = document.getElementById('open-nav');
-// const closeNav = document.getElementById('close-nav');
-// const navLinks = document.getElementById('nav-links');
+const openNav = document.getElementById('open-nav');
+const closeNav = document.getElementById('close-nav');
+const navLinks = document.getElementById('nav-links');
 
-// openNav.addEventListener('click', () => {
-// 	navLinks.classList.add('open');
-// 	openNav.classList.add('hide');
-// });
+openNav.addEventListener('click', () => {
+	navLinks.classList.add('open');
+	openNav.classList.add('hide');
+	console.log('navigation open');
+});
 
-// closeNav.addEventListener('click', () => {
-// 	navLinks.classList.remove('open');
-// 	openNav.classList.remove('hide');
-// });
+closeNav.addEventListener('click', () => {
+	navLinks.classList.remove('open');
+	openNav.classList.remove('hide');
+	console.log('navigation closed');
+});
 
 // Destination Pagination
 
@@ -113,7 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			crewImgDiv.style.height = '258px';
 			crewImgDiv.style.width = '258px';
 		}
-		// Update the name
+		// Update the name and rank
+		const crewRank = document.getElementById('crew-rank');
+		if (crewRank) crewRank.textContent = crew.role;
 		const crewName = document.getElementById('crew-name');
 		if (crewName) crewName.textContent = crew.name;
 		// Update the description
