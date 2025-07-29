@@ -13,52 +13,54 @@
 		<link rel="stylesheet" href="styles-redesign.css" />
 		<title>Space tourism website</title>
 	</head>
-	<body>
+	<body
+		class="mobile-destination-background tablet-destination-background desktop-destination-background"
+	>
 		<!--Header Navigation  -->
 		<header>
 			<nav class="navigation-menu">
 				<div class="nav-center">
 					<div class="mobile-menu">
-						<a
-							href="home.html"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<a href="home.html" rel="noopener noreferrer">
 							<img
 								src="./assets/shared/logo.svg"
 								alt="home logo"
 							/>
 						</a>
-						<button class="nav-toggle">
+						<button class="nav-toggle" id="open-nav">
 							<img
 								src="./assets/shared/icon-hamburger.svg"
 								alt="menu open"
 							/>
 						</button>
-						<div class="desktop-line"></div>
+						<!-- <div class="desktop-line"></div> -->
 					</div>
 					<!-- links -->
-					<ul>
-						<button class="close-toggle">
+					<ul class="nav-links" id="nav-links">
+						<button class="close-toggle" id="close-nav">
 							<img
 								src="./assets/shared/icon-close.svg"
 								alt="close-btn"
 							/>
 						</button>
 						<li>
-							<a href="./home.html"> <span>00</span>Home </a>
-						</li>
-						<li>
-							<a href="./destination.html">
-								<span>01</span>Destination
+							<a href="./home.html">
+								<span>00</span>&nbsp;Home
 							</a>
 						</li>
 						<li>
-							<a href="./crew.html"> <span>02</span>Crew </a>
+							<a href="./destination.html" class="nav-active">
+								<span>01</span>&nbsp;Destination
+							</a>
+						</li>
+						<li>
+							<a href="./crew.html">
+								<span>02</span>&nbsp;Crew
+							</a>
 						</li>
 						<li>
 							<a href="./technology.html">
-								<span>03</span>Technology
+								<span>03</span>&nbsp;Technology
 							</a>
 						</li>
 					</ul>
@@ -72,11 +74,7 @@
 				</div>
 				<div class="section-content content destination">
 					<div class="section-content-image">
-						<img
-							src="./assets/destination/image-moon.webp"
-							alt="image-moon"
-							id="destination-img"
-						/>
+						<img id="destination-img" />
 					</div>
 					<div
 						class="section-content-description destination-description"
@@ -88,7 +86,7 @@
 							>
 								<ul class="pagination">
 									<li>
-										<a href="">Moon</a>
+										<a href="" aria-current="page">Moon</a>
 									</li>
 									<li>
 										<a href="">Mars</a>
@@ -113,17 +111,21 @@
 									id="destination-description"
 								></p>
 							</div>
-							<div class="line"></div>
+							<div class="destination-line"></div>
 							<div class="destination-statistics-container">
-								<div class="statistics-distance">
-									<p>Avg. Distance</p>
+								<div class="statistics">
+									<p class="statistics-title">
+										Avg. Distance
+									</p>
 									<p
 										class="destination-distance"
 										id="destination-distance"
 									></p>
 								</div>
-								<div class="statistics-travel">
-									<p>Est. Travel Time</p>
+								<div class="statistics">
+									<p class="statistics-title">
+										Est. Travel Time
+									</p>
 									<p
 										class="destination-time"
 										id="destination-time"

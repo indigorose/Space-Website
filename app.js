@@ -15,6 +15,18 @@ closeNav.addEventListener('click', () => {
 	console.log('navigation closed');
 });
 
+// Active navigation page
+
+document.querySelectorAll('.nav-links li a').forEach((link) => {
+	link.addEventListener('click', function () {
+		document
+			.querySelectorAll('.nav-links li a')
+			.forEach((l) => l.classList.remove('nav-active'));
+		this.classList.add('nav-active');
+		console.log('changed');
+	});
+});
+
 // Destination Pagination
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -48,11 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Update the image as a background
 		const destinationImgDiv = document.getElementById('destination-img');
 		if (destinationImgDiv) {
-			destinationImgDiv.style.backgroundImage = `url('${destination.images.webp}')`;
+			destinationImgDiv.src = destination.images.webp;
 			destinationImgDiv.style.backgroundSize = 'cover';
 			destinationImgDiv.style.backgroundPosition = 'center';
-			destinationImgDiv.style.height = '258px';
-			destinationImgDiv.style.width = '258px';
+			destinationImgDiv.style.height = '150px';
+			destinationImgDiv.style.width = '150px';
 		}
 		// Update the name
 		const destinationName = document.getElementById('destination-name');
@@ -86,12 +98,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		.then((response) => response.json())
 		.then((data) => {
 			crewData = data.crew;
-			setupPagination();
+			setupCrewPagination();
 			updateCrew(0); // This will show the first array item by default
 		});
 
-	function setupPagination() {
-		const paginationLinks = document.querySelectorAll('.pagination li a');
+	function setupCrewPagination() {
+		const paginationLinks = document.querySelectorAll(
+			'.crew-pagination li a'
+		);
 		paginationLinks.forEach((link, idx) => {
 			link.addEventListener('click', function (e) {
 				e.preventDefault();
@@ -99,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				paginationLinks.forEach((l) =>
 					l.removeAttribute('aria-current')
 				);
-				this.setAttribute('aria-current', 'page');
+				this.setAttribute('aria-current', 'page-active');
 			});
 		});
 	}
@@ -110,10 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		const crewImgDiv = document.getElementById('crew-img');
 		if (crewImgDiv) {
 			crewImgDiv.style.backgroundImage = `url('${crew.images.webp}')`;
-			crewImgDiv.style.backgroundSize = 'cover';
+			crewImgDiv.style.backgroundSize = 'contain';
+			crewImgDiv.style.backgroundRepeat = 'no-repeat';
 			crewImgDiv.style.backgroundPosition = 'center';
-			crewImgDiv.style.height = '258px';
-			crewImgDiv.style.width = '258px';
+			crewImgDiv.style.height = '330px';
+			crewImgDiv.style.width = '271px';
 		}
 		// Update the name and rank
 		const crewRank = document.getElementById('crew-rank');
@@ -137,12 +152,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		.then((response) => response.json())
 		.then((data) => {
 			techData = data.technology;
-			setupPagination();
+			setupTechPagination();
 			updateTech(0); // This will show the first array item by default
 		});
 
-	function setupPagination() {
-		const paginationLinks = document.querySelectorAll('.pagination li a');
+	function setupTechPagination() {
+		const paginationLinks = document.querySelectorAll(
+			'.tech-pagination li a'
+		);
 		paginationLinks.forEach((link, idx) => {
 			link.addEventListener('click', function (e) {
 				e.preventDefault();
@@ -160,9 +177,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Update the image as a background
 		const techImgDiv = document.getElementById('tech-img');
 		if (techImgDiv) {
-			techImgDiv.style.backgroundImage = `url('${tech.images.landscape}')`;
-			techImgDiv.style.backgroundSize = 'cover';
+			techImgDiv.src = tech.images.portrait;
+			techImgDiv.style.backgroundSize = 'contain';
 			techImgDiv.style.backgroundPosition = 'center';
+			techImgDiv.style.backgroundRepeat = 'no-repeat';
 			techImgDiv.style.height = '258px';
 			techImgDiv.style.width = '100vw';
 		}
