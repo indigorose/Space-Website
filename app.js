@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				paginationLinks.forEach((l) =>
 					l.removeAttribute('aria-current')
 				);
-				this.setAttribute('aria-current', 'page');
+				this.setAttribute('aria-current', 'tech-active');
 			});
 		});
 	}
