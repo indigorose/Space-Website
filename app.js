@@ -42,7 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 
 	function setupPagination() {
-		const paginationLinks = document.querySelectorAll('.pagination li a');
+		const paginationLinks = document.querySelectorAll(
+			'.dest-pagination li a'
+		);
 		paginationLinks.forEach((link, idx) => {
 			link.addEventListener('click', function (e) {
 				e.preventDefault();
@@ -50,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				paginationLinks.forEach((l) =>
 					l.removeAttribute('aria-current')
 				);
-				this.setAttribute('aria-current', 'page');
+				this.setAttribute('aria-current', 'dest-page');
 			});
 		});
 	}
@@ -63,8 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			destinationImgDiv.src = destination.images.webp;
 			destinationImgDiv.style.backgroundSize = 'cover';
 			destinationImgDiv.style.backgroundPosition = 'center';
-			destinationImgDiv.style.height = '150px';
-			destinationImgDiv.style.width = '150px';
+			// destinationImgDiv.style.height = '150px';
+			// destinationImgDiv.style.width = '150px';
 		}
 		// Update the name
 		const destinationName = document.getElementById('destination-name');
