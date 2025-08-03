@@ -129,8 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			crewImgDiv.style.backgroundSize = 'contain';
 			crewImgDiv.style.backgroundRepeat = 'no-repeat';
 			crewImgDiv.style.backgroundPosition = 'center';
-			crewImgDiv.style.height = '330px';
-			crewImgDiv.style.width = '271px';
 		}
 		// Update the name and rank
 		const crewRank = document.getElementById('crew-rank');
@@ -183,7 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			techImgDiv.style.backgroundSize = 'contain';
 			techImgDiv.style.backgroundPosition = 'center';
 			techImgDiv.style.backgroundRepeat = 'no-repeat';
-			techImgDiv.style.height = '258px';
 			techImgDiv.style.width = '100vw';
 		}
 		// Update the name

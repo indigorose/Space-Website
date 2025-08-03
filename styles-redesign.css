@@ -834,4 +834,57 @@ a[aria-current='dest-page'] {
 	.statistics {
 		width: 245px;
 	}
+
+	/* Crew tablet page */
+
+	.tablet-crew-background {
+		margin: 0;
+		padding: 0;
+		background-color: var(--blue-900);
+		background-image: url('./assets/crew/background-crew-tablet.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-width: 768px;
+		min-height: 1024px;
+	}
+
+	.crew-section {
+		padding: var(--spacing-500);
+	}
+
+	.explanation-2 {
+		width: 512px;
+		margin: 0 auto;
+	}
+
+	.image-container {
+		height: 560px;
+		width: 446.74px;
+	}
+
+	/* Technology tablet Page */
+
+	.tablet-tech-background {
+		margin: 0;
+		padding: 0;
+		background-color: var(--blue-900);
+		background-image: url('./assets/technology/background-technology-tablet.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-width: 768px;
+		min-height: 1024px;
+	}
+
+	.technology-image-container {
+		height: 421px;
+	}
+
+	.tech-image {
+		height: 357px;
+	}
+
+	.tech-explanation {
+		width: 512px;
+		margin: 0 auto;
+	}
 }
