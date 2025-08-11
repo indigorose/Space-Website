@@ -177,11 +177,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Update the image as a background
 		const techImgDiv = document.getElementById('tech-img');
 		if (techImgDiv) {
-			techImgDiv.src = tech.images.portrait;
+			if (window.innerWidth >= 1120) {
+				techImgDiv.src = tech.images.portrait;
+			} else {
+				techImgDiv.src = tech.images.landscape;
+			}
 			techImgDiv.style.backgroundSize = 'contain';
 			techImgDiv.style.backgroundPosition = 'center';
 			techImgDiv.style.backgroundRepeat = 'no-repeat';
-			techImgDiv.style.width = '100vw';
 		}
 		// Update the name
 		const techName = document.getElementById('tech-name');
