@@ -76,7 +76,7 @@
 }
 
 body {
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	font-family: 'Barlow', sans-serif;
 	color: var(--white);
@@ -86,7 +86,7 @@ body {
 
 /* Layout guide */
 
-/* main,
+main,
 div,
 nav,
 footer,
@@ -101,7 +101,7 @@ ul,
 li,
 img {
 	border: var(--pencil);
-} */
+}
 
 /* Mobile first styling */
 /* Font presets - 1, 2, 3, 4, 6, 8, 9 */
@@ -491,6 +491,8 @@ span::after {
 	color: var(--blue-300);
 	text-align: center;
 	height: 164px;
+	font-size: var(--fs-9);
+	line-height: 180%;
 }
 
 .pagination-container {
@@ -623,11 +625,6 @@ span::after {
 	background-color: white;
 }
 
-.description {
-	font-size: var(--fs-9);
-	line-height: 180%;
-}
-
 /* Tablet styling */
 
 @media (width >= 48em) {
@@ -710,6 +707,8 @@ span::after {
 		color: var(--white);
 		font-family: 'Barlow-Condensed', sans-serif;
 		text-transform: uppercase;
+		border-bottom: 3px solid transparent;
+		transition: border-bottom 0.4s ease;
 	}
 
 	.nav-links li a.nav-active {
@@ -762,28 +761,12 @@ span::after {
 	}
 
 	.hero-button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		width: 272px;
 		height: 272px;
-		background-color: var(--white);
-		border-radius: 50%;
-	}
-	.hero-button:hover {
-		box-shadow: 0 0 0 70px var(--shadow);
-		transition: box-shadow 0.7s ease;
 	}
 
 	.hero-button a {
-		color: var(--blue-900);
-		font-family: 'Bellefair', sans-serif;
-		font-weight: 400;
-		text-transform: uppercase;
-		text-decoration: none;
 		font-size: var(--fs-d-4);
-		border: none;
-		cursor: pointer;
 	}
 
 	/* Destination Tablet Page */
@@ -927,19 +910,6 @@ span::after {
 /* Desktop Styling larger than 70em */
 
 @media (width >= 70em) {
-	/* Home Page Styling */
-
-	.desktop-background {
-		margin: 0 auto;
-		padding: 0;
-		background-color: var(--blue-900);
-		background-image: url('./assets/home/background-home-desktop.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		width: 1440px;
-		height: 1024px;
-	}
-
 	/* Navigation */
 
 	.navigation-menu {
@@ -983,7 +953,18 @@ span::after {
 		z-index: 1;
 	}
 
-	/* Main section */
+	/* Home Page Styling */
+
+	.desktop-background {
+		margin: 0 auto;
+		padding: 0;
+		background-color: var(--blue-900);
+		background-image: url('./assets/home/background-home-desktop.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 1440px;
+		height: 1024px;
+	}
 
 	.main-content {
 		padding: var(--spacing-1600) 0;
