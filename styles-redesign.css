@@ -86,7 +86,7 @@ body {
 
 /* Layout guide */
 
-main,
+/* main,
 div,
 nav,
 footer,
@@ -101,7 +101,7 @@ ul,
 li,
 img {
 	border: var(--pencil);
-}
+} */
 
 /* Mobile first styling */
 /* Font presets - 1, 2, 3, 4, 6, 8, 9 */
